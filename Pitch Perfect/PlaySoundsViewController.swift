@@ -33,17 +33,26 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: AnyObject) {
-        audioPlayer2.stop()
-        audioPlayer.stop()
-        audioPlayer.rate = 0.5
-        audioPlayer.play()
+        playAudioWithVariableRate(0.5)
     }
 
     @IBAction func playFastAudio(sender: AnyObject) {
+        playAudioWithVariableRate(2.0)
+    }
+    
+    func playAudioWithVariableRate(rate: Float) {
+        stopAudioPlayersAndEngine()
+        audioPlayer.rate = rate
+        audioPlayer.play()
+    }
+    
+    func stopAudioPlayersAndEngine() {
         audioPlayer2.stop()
         audioPlayer.stop()
-        audioPlayer.rate = 2.0
-        audioPlayer.play()
+        audioEngine.stop()
+        audioEngine.reset()
+        audioPlayer.rate = 1.0
+        audioPlayer.currentTime = 0
     }
     
     @IBAction func playChipmunkAudio(sender: AnyObject) {
@@ -55,8 +64,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playEchoAudio(sender: AnyObject) {
-        audioPlayer.stop()
-        audioPlayer2.stop()
+        stopAudioPlayersAndEngine()
         
         audioPlayer2.volume = 0.8;
         audioPlayer2.currentTime = audioPlayer.currentTime
@@ -65,10 +73,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playReverbAudio(sender: AnyObject) {
-        audioPlayer.stop()
-        audioPlayer2.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAudioPlayersAndEngine()
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -88,17 +93,15 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func stopPlayingAudio(sender: AnyObject) {
-        audioPlayer.stop()
-        audioPlayer2.stop()
-        audioPlayer.rate = 1.0
-        audioPlayer.currentTime = 0
+        stopAudioPlayersAndEngine()
     }
     
+    /// This method will first stop all audio and play the audio
+    /// with the given pitch.
+    ///
+    /// :param: pitch The amount by which the input signal is pitch shifted
     func playAudioWithVariablePitch(pitch: Float) {
-        audioPlayer.stop()
-        audioPlayer2.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAudioPlayersAndEngine()
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)

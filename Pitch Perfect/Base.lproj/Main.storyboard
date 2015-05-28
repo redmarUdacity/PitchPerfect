@@ -155,20 +155,20 @@
                                 <exclude reference="Vgl-Uf-Q4a"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="WOr-tG-jGL"/>
-                                <exclude reference="eu3-ux-Ao0"/>
-                                <exclude reference="jxO-77-6Zo"/>
+                                <exclude reference="lZ8-E0-sH4"/>
+                                <exclude reference="6He-qq-c9s"/>
                                 <exclude reference="GVe-mo-Jt0"/>
                                 <exclude reference="T8x-ac-MEV"/>
                                 <exclude reference="cwh-GZ-UIn"/>
-                                <exclude reference="6He-qq-c9s"/>
+                                <exclude reference="WOr-tG-jGL"/>
+                                <exclude reference="eu3-ux-Ao0"/>
+                                <exclude reference="jxO-77-6Zo"/>
                                 <exclude reference="Zbg-sn-tvd"/>
-                                <exclude reference="9RM-ud-iKe"/>
                                 <exclude reference="3aP-fl-bUk"/>
                                 <exclude reference="Op1-Ab-lnm"/>
                                 <exclude reference="YDp-5S-rVZ"/>
                                 <exclude reference="zbb-vH-OBr"/>
-                                <exclude reference="lZ8-E0-sH4"/>
+                                <exclude reference="9RM-ud-iKe"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -181,20 +181,20 @@
                                 <include reference="Vgl-Uf-Q4a"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="WOr-tG-jGL"/>
-                                <include reference="eu3-ux-Ao0"/>
-                                <include reference="jxO-77-6Zo"/>
+                                <include reference="lZ8-E0-sH4"/>
+                                <include reference="6He-qq-c9s"/>
                                 <include reference="GVe-mo-Jt0"/>
                                 <include reference="T8x-ac-MEV"/>
                                 <include reference="cwh-GZ-UIn"/>
-                                <include reference="6He-qq-c9s"/>
+                                <include reference="WOr-tG-jGL"/>
+                                <include reference="eu3-ux-Ao0"/>
+                                <include reference="jxO-77-6Zo"/>
                                 <include reference="Zbg-sn-tvd"/>
-                                <include reference="9RM-ud-iKe"/>
                                 <include reference="3aP-fl-bUk"/>
                                 <include reference="Op1-Ab-lnm"/>
                                 <include reference="YDp-5S-rVZ"/>
                                 <exclude reference="zbb-vH-OBr"/>
-                                <include reference="lZ8-E0-sH4"/>
+                                <include reference="9RM-ud-iKe"/>
                             </mask>
                         </variation>
                     </view>
@@ -213,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="952.5" y="288"/>
         </scene>
-        <!--Play Sounds View Controller-->
+        <!--Audio Effects-->
         <scene sceneID="SmS-xO-Pas">
             <objects>
-                <viewController id="dTd-lg-l1s" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dTd-lg-l1s" userLabel="Audio Effects" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Yt-xe-mPU"/>
                         <viewControllerLayoutGuide type="bottom" id="FO0-j7-6Eu"/>
